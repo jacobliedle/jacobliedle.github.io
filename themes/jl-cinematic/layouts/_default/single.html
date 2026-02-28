@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container container--narrow">
+    {{ with .Params.sectionLabel }}
+    <p class="section__label">{{ . }}</p>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+    <p class="hero__subtitle" style="margin-top: 0.5rem;">{{ . }}</p>
+    {{ end }}
+    <div class="section__divider" style="margin: 2rem 0;"></div>
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<!-- Portrait hero with gradient blend -->
+{{ with .Params.portrait }}
+<section class="about-hero">
+  <div class="about-hero__portrait">
+    <img src="{{ . | relURL }}" alt="{{ $.Params.portraitAlt | default "Portrait" }}">
+  </div>
+  <div class="about-hero__overlay">
+    <div class="container">
+      <p class="section__label">{{ $.Params.sectionLabel | default "About" }}</p>
+      <h1 class="about-hero__name">{{ $.Title }}</h1>
+      {{ with $.Params.role }}
+      <p class="about__role">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="about">
+  <div class="container container--narrow">
+    <div class="about__bio">
+      {{ .Content }}
+    </div>
+  </div>
+
+    <!-- Services Detail -->
+    {{ with .Params.services }}
+    <div style="margin-top: 6rem;">
+      <div class="section__header">
+        <p class="section__label">Expertise</p>
+        <h2 class="section__title">Services</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="services__grid">
+        {{ range . }}
+        <div class="service-card">
+          <h3 class="service-card__title">{{ .title }}</h3>
+          <p class="service-card__text">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

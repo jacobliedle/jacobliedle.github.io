@@ -1,0 +1,80 @@
+{{ define "main" }}
+
+<!-- Hero with background video -->
+<section class="hero">
+  <div class="hero__bg">
+    {{ with site.Params.heroVideoFile }}
+    <video autoplay muted loop playsinline poster="{{ site.Params.heroPoster | relURL }}">
+      <source src="{{ . | relURL }}" type="video/mp4">
+    </video>
+    {{ else }}
+    {{ with site.Params.heroPoster }}
+    <img src="{{ . | relURL }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    {{ end }}
+    {{ end }}
+  </div>
+  <div class="hero__content">
+    <h1 class="hero__tagline">{{ site.Params.heroTagline | default "Stories worth telling." | safeHTML }}</h1>
+    <p class="hero__subtitle">{{ site.Params.heroSubtitle | default "" }}</p>
+    {{ with site.Params.heroCTA }}
+    <a href="{{ site.Params.heroCTALink | default "/reel/" }}" class="hero__cta">{{ . }}</a>
+    {{ end }}
+  </div>
+</section>
+
+<!-- Services Preview -->
+{{ with site.Params.services }}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">What I Do</p>
+      <h2 class="section__title">{{ site.Params.servicesTitle | default "Services" }}</h2>
+      <div class="section__divider"></div>
+    </div>
+    <div class="services__grid">
+      {{ range . }}
+      <div class="service-card">
+        <h3 class="service-card__title">{{ .title }}</h3>
+        <p class="service-card__text">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Behind the Scenes / About Teaser -->
+{{ with site.Params.aboutTeaser }}
+<section class="section section--cinematic">
+  <div class="section--cinematic__bg">
+    {{ with site.Params.aboutTeaserImage }}
+    <img src="{{ . | relURL }}" alt="">
+    {{ end }}
+  </div>
+  <div class="container container--narrow text-center" style="position: relative; z-index: 2;">
+    <p class="section__label">About</p>
+    <h2 class="section__title">{{ site.Params.aboutTeaserTitle | default "" | safeHTML }}</h2>
+    <div class="section__divider"></div>
+    <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">{{ . }}</p>
+    <a href="/about/" class="hero__cta" style="margin-top: 2rem; display: inline-block;">Learn More</a>
+  </div>
+</section>
+{{ end }}
+
+<!-- Location -->
+<section class="section">
+  <div class="container">
+    <div class="location-strip">
+      <div class="location-strip__map">
+        <img src="/images/argo-originals/usa-map-denver-dot.png" alt="Denver, Colorado">
+      </div>
+      <div class="location-strip__text">
+        <p class="section__label">Based In</p>
+        <h3>Denver, Colorado</h3>
+        <p>While I love calling the Rocky Mountains home, I'll go pretty much any place you can lug a camera. Available for projects across the U.S. and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

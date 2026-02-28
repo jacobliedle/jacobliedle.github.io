@@ -1,0 +1,46 @@
+{{ define "main" }}
+<section class="contact">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">Get in Touch</p>
+      <h1 class="section__title">{{ .Title }}</h1>
+      <div class="section__divider"></div>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__info">
+        {{ .Content }}
+
+        {{ with .Params.email }}
+        <a href="mailto:{{ . }}" class="contact__email">{{ . }}</a>
+        {{ end }}
+
+        {{ with .Params.socials }}
+        <ul class="contact__socials">
+          {{ range . }}
+          <li>
+            <a href="{{ .url }}" class="contact__social-link" target="_blank" rel="noopener" aria-label="{{ .name }}">{{ .icon | safeHTML }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+
+        {{ with .Params.location }}
+        <p style="margin-top: 2rem; color: var(--text-muted);">{{ . }}</p>
+        {{ end }}
+      </div>
+
+      {{ if .Params.showForm }}
+      <form class="contact__form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><input name="bot-field"></p>
+        <input class="form__input" type="text" name="name" placeholder="Your Name" required>
+        <input class="form__input" type="email" name="email" placeholder="Your Email" required>
+        <textarea class="form__textarea" name="message" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit" class="form__submit">Send Message</button>
+      </form>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

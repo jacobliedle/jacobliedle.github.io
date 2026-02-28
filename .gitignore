@@ -2,6 +2,10 @@
 public/
 resources/_gen/
 
+# Videos hosted externally (YouTube/Vimeo) — hero bg stays local
+static/videos/*.mp4
+!static/videos/hero-background.mp4
+
 # OS files
 .DS_Store
 Thumbs.db
