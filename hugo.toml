@@ -1,6 +1,6 @@
-baseURL = 'https://jacobliedle.com/'
+baseURL = 'https://jacobliedle.github.io/'
 languageCode = 'en-us'
-title = 'Jacob Liedle'
+title = 'Argo Media Group'
 theme = 'jl-cinematic'
 
 [params]
