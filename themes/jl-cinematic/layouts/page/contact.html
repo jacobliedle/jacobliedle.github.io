@@ -11,8 +11,19 @@
       <div class="contact__info">
         {{ .Content }}
 
+        {{ with .Params.emails }}
+        <div class="contact__emails">
+          {{ range . }}
+          <div class="contact__email-row">
+            <span class="contact__email-label">{{ .label }}</span>
+            <a href="mailto:{{ .address }}" class="contact__email">{{ .address }}</a>
+          </div>
+          {{ end }}
+        </div>
+        {{ else }}
         {{ with .Params.email }}
         <a href="mailto:{{ . }}" class="contact__email">{{ . }}</a>
+        {{ end }}
         {{ end }}
 
         {{ with .Params.socials }}
@@ -36,7 +47,7 @@
         <p style="display:none"><input name="bot-field"></p>
         <input class="form__input" type="text" name="name" placeholder="Your Name" required>
         <input class="form__input" type="email" name="email" placeholder="Your Email" required>
-        <textarea class="form__textarea" name="message" placeholder="Tell me about your project..." required></textarea>
+        <textarea class="form__textarea" name="message" placeholder="Tell us about your project..." required></textarea>
         <button type="submit" class="form__submit">Send Message</button>
       </form>
       {{ end }}

@@ -4,24 +4,24 @@ title = 'Argo Media Group'
 theme = 'jl-cinematic'
 
 [params]
-  brand = "Jacob Liedle"
-  description = "Director and cinematographer based in Denver, Colorado. Commercial, documentary, music video, and narrative filmmaking."
+  brand = "Argo Media Group"
+  description = "Full service video production based in Denver, Colorado. Commercial, documentary, music video, and narrative filmmaking."
 
   # Hero section
-  heroTagline = "It takes an artist to tell a <em>great story</em>."
-  heroSubtitle = "Director & Cinematographer — Denver, Colorado"
-  heroCTA = "Watch the Reel"
-  heroCTALink = "/reel/"
+  heroTagline = "Inspire. Create."
+  heroSubtitle = "Full Service Video Production — Denver, Colorado"
+  heroCTA = "Watch Demo Reel"
+  heroCTALink = "/demo/"
   heroVideoFile = "/videos/hero-background.mp4"
   heroPoster = "/images/argo-originals/homepage-hero-video-still.jpg"
 
-  # About teaser on homepage (with BTS background image)
-  aboutTeaserTitle = "Filmmaker, storyteller, collaborator."
-  aboutTeaser = "Video plays a vital role in our modern world. It is a beautiful synergy of many disciplines and art forms, and requires true dedication and commitment to master. It takes an artist to tell a great story."
+  # About teaser on homepage
+  aboutTeaserTitle = "Filmmakers, storytellers, collaborators."
+  aboutTeaser = "Video plays a vital role in our modern world. It is a beautiful synergy of many disciplines and art forms, and requires true dedication and commitment to master. Anyone can point a camera — it takes an artist to tell a great story. We are a team of creative professionals committed to the lifelong journey of perfecting our craft."
   aboutTeaserImage = "/images/argo-originals/amg-behind-the-scenes-split.jpg"
 
   # Services on homepage
-  servicesTitle = "Crafting Visual Stories"
+  servicesTitle = "Full Service Video Production"
   [[params.services]]
     title = "Commercial"
     description = "Brand films, product spots, and corporate storytelling that connects with your audience."
@@ -38,14 +38,14 @@ theme = 'jl-cinematic'
 # Navigation
 [menus]
   [[menus.main]]
-    name = "Reel"
-    url = "/reel/"
+    name = "Demo"
+    url = "/demo/"
     weight = 1
   [[menus.main]]
     name = "About"
     url = "/about/"
     weight = 2
   [[menus.main]]
-    name = "Contact"
-    url = "/contact/"
+    name = "Connect"
+    url = "/connect/"
     weight = 3
