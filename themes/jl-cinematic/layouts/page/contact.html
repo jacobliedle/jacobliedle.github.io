@@ -47,6 +47,26 @@
         <p style="display:none"><input name="bot-field"></p>
         <input class="form__input" type="text" name="name" placeholder="Your Name" required>
         <input class="form__input" type="email" name="email" placeholder="Your Email" required>
+        <input class="form__input" type="text" name="company" placeholder="Company (optional)">
+        <select class="form__select" name="project_type" required>
+          <option value="" disabled selected>Project Type</option>
+          <option value="commercial">Commercial / Brand Film</option>
+          <option value="documentary">Documentary</option>
+          <option value="music_video">Music Video</option>
+          <option value="narrative">Narrative / Short Film</option>
+          <option value="event">Event Coverage</option>
+          <option value="corporate">Corporate Video</option>
+          <option value="other">Other / Not Sure Yet</option>
+        </select>
+        <select class="form__select" name="budget" required>
+          <option value="" disabled selected>Estimated Budget</option>
+          <option value="under5k">Under $5,000</option>
+          <option value="5k-10k">$5,000 – $10,000</option>
+          <option value="10k-25k">$10,000 – $25,000</option>
+          <option value="25k-50k">$25,000 – $50,000</option>
+          <option value="50k+">$50,000+</option>
+          <option value="flexible">Flexible / Let's Talk</option>
+        </select>
         <textarea class="form__textarea" name="message" placeholder="Tell us about your project..." required></textarea>
         <button type="submit" class="form__submit">Send Message</button>
       </form>

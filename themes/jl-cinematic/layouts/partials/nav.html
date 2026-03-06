@@ -5,7 +5,11 @@
     <ul class="nav__links">
       {{ range site.Menus.main }}
       <li>
+        {{ if .Params.cta }}
+        <a href="{{ .URL }}" class="nav__cta">{{ .Name }}</a>
+        {{ else }}
         <a href="{{ .URL }}" class="nav__link{{ if $.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
+        {{ end }}
       </li>
       {{ end }}
     </ul>

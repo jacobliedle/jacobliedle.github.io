@@ -10,8 +10,8 @@ theme = 'jl-cinematic'
   # Hero section
   heroTagline = "Inspire. Create."
   heroSubtitle = "Full Service Video Production — Denver, Colorado"
-  heroCTA = "Watch Demo Reel"
-  heroCTALink = "/demo/"
+  heroCTA = "See Our Work"
+  heroCTALink = "/work/"
   heroVideoFile = "/videos/hero-background.mp4"
   heroPoster = "/images/argo-originals/homepage-hero-video-still.jpg"
 
@@ -35,17 +35,56 @@ theme = 'jl-cinematic'
     title = "Narrative"
     description = "Short and long form narratives brought to life with intentional cinematography."
 
+  # Featured work for homepage thumbnails
+  [[params.featuredWork]]
+    title = "Haymaker Promo"
+    type = "Commercial"
+  [[params.featuredWork]]
+    title = "Documentary Short"
+    type = "Documentary"
+  [[params.featuredWork]]
+    title = "Artist Music Video"
+    type = "Music Video"
+
+  # Testimonials — swap placeholder text for real quotes when ready
+  [[params.testimonials]]
+    quote = "Argo delivered a final product that exceeded every expectation. The team understood our brand immediately and brought a level of craft that made us look world-class."
+    author = "Client Name"
+    company = "Company — Placeholder"
+  [[params.testimonials]]
+    quote = "Professional, creative, and genuinely easy to work with. They made the whole process feel effortless and came back with something we're proud to put in front of our audience."
+    author = "Client Name"
+    company = "Company — Placeholder"
+  [[params.testimonials]]
+    quote = "We saw real engagement lift after launching the brand film. Not just a pretty video — it actually moved the needle. We'll be back for the next one."
+    author = "Client Name"
+    company = "Company — Placeholder"
+
+  # Client logos — add entries here when available
+  # [[params.logos]]
+  #   src = "/images/clients/client-name.png"
+  #   name = "Client Name"
+
 # Navigation
 [menus]
   [[menus.main]]
-    name = "Demo"
-    url = "/demo/"
+    name = "Home"
+    url = "/"
     weight = 1
+  [[menus.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 2
+  [[menus.main]]
+    name = "Work"
+    url = "/work/"
+    weight = 3
   [[menus.main]]
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 4
   [[menus.main]]
-    name = "Connect"
-    url = "/connect/"
-    weight = 3
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+    params = {cta = true}

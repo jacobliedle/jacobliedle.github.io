@@ -17,7 +17,7 @@
     <h1 class="hero__tagline">{{ site.Params.heroTagline | default "Stories worth telling." | safeHTML }}</h1>
     <p class="hero__subtitle">{{ site.Params.heroSubtitle | default "" }}</p>
     {{ with site.Params.heroCTA }}
-    <a href="{{ site.Params.heroCTALink | default "/reel/" }}" class="hero__cta">{{ . }}</a>
+    <a href="{{ site.Params.heroCTALink | default "/work/" }}" class="hero__cta">{{ . }}</a>
     {{ end }}
   </div>
 </section>
@@ -39,9 +39,47 @@
       </div>
       {{ end }}
     </div>
+    <div class="section__cta">
+      <a href="/services/" class="hero__cta">See All Services</a>
+    </div>
   </div>
 </section>
 {{ end }}
+
+<!-- Selected Work Thumbnails -->
+<section class="section work-preview">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">Portfolio</p>
+      <h2 class="section__title">Selected Work</h2>
+      <div class="section__divider"></div>
+    </div>
+    <div class="work-preview__grid">
+      {{ range site.Params.featuredWork }}
+      <div class="work-preview__item work-preview__item--placeholder">
+        <span>{{ .type }}</span>
+        <div class="work-preview__label">{{ .title }}</div>
+      </div>
+      {{ else }}
+      <div class="work-preview__item work-preview__item--placeholder">
+        <span>Commercial</span>
+        <div class="work-preview__label">Haymaker Promo</div>
+      </div>
+      <div class="work-preview__item work-preview__item--placeholder">
+        <span>Documentary</span>
+        <div class="work-preview__label">Documentary Short</div>
+      </div>
+      <div class="work-preview__item work-preview__item--placeholder">
+        <span>Music Video</span>
+        <div class="work-preview__label">Artist Music Video</div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="section__cta">
+      <a href="/work/" class="hero__cta">View All Work</a>
+    </div>
+  </div>
+</section>
 
 <!-- Behind the Scenes / About Teaser -->
 {{ with site.Params.aboutTeaser }}
@@ -56,10 +94,62 @@
     <h2 class="section__title">{{ site.Params.aboutTeaserTitle | default "" | safeHTML }}</h2>
     <div class="section__divider"></div>
     <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">{{ . }}</p>
-    <a href="/about/" class="hero__cta" style="margin-top: 2rem; display: inline-block;">Learn More</a>
+    <a href="/about/" class="hero__cta" style="margin-top: 2rem; display: inline-block;">Meet the Team</a>
   </div>
 </section>
 {{ end }}
+
+<!-- Client Logos -->
+<section class="logos-strip section--alt">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">Clients</p>
+    </div>
+    <div class="logos-strip__grid">
+      {{ range site.Params.logos }}
+      <div class="logos-strip__item">
+        <img src="{{ .src | relURL }}" alt="{{ .name }}">
+      </div>
+      {{ else }}
+      <div class="logos-strip__item logos-strip__item--placeholder"><span>Logo</span></div>
+      <div class="logos-strip__item logos-strip__item--placeholder"><span>Logo</span></div>
+      <div class="logos-strip__item logos-strip__item--placeholder"><span>Logo</span></div>
+      <div class="logos-strip__item logos-strip__item--placeholder"><span>Logo</span></div>
+      <div class="logos-strip__item logos-strip__item--placeholder"><span>Logo</span></div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof — Testimonials -->
+<section class="section social-proof">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">Client Results</p>
+      <h2 class="section__title">What Clients Say</h2>
+      <div class="section__divider"></div>
+    </div>
+    <div class="testimonials__grid">
+      {{ range site.Params.testimonials }}
+      <div class="testimonial">
+        <p class="testimonial__quote">"{{ .quote }}"</p>
+        <p class="testimonial__author">{{ .author }}</p>
+        <p class="testimonial__company">{{ .company }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Strip -->
+<section class="cta-strip">
+  <div class="container container--narrow text-center">
+    <p class="section__label">Work With Us</p>
+    <h2 class="cta-strip__title">Have a story to tell?</h2>
+    <p class="cta-strip__sub">Whether you have a fully formed concept or just the spark of an idea, we'd love to hear about your project.</p>
+    <a href="/contact/" class="hero__cta">Start a Conversation</a>
+  </div>
+</section>
 
 <!-- Location -->
 <section class="section">

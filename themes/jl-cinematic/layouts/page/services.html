@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="services-page">
+  <div class="container">
+    <div class="section__header">
+      <p class="section__label">{{ .Params.sectionLabel | default "What We Do" }}</p>
+      <h1 class="section__title">{{ .Title }}</h1>
+      <div class="section__divider"></div>
+      <div class="services-page__intro">{{ .Content }}</div>
+    </div>
+
+    <div class="services-detail">
+      {{ range .Params.services }}
+      <div class="service-detail">
+        <div class="service-detail__content">
+          <p class="service-detail__label">{{ .label }}</p>
+          <h2 class="service-detail__title">{{ .title }}</h2>
+          <p class="service-detail__desc">{{ .description }}</p>
+          {{ with .deliverables }}
+          <ul class="service-detail__list">
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+        <div class="service-detail__image service-detail__image--placeholder">
+          <span>Image Coming Soon</span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- CTA Strip -->
+  <div class="cta-strip">
+    <div class="container container--narrow text-center">
+      <p class="section__label">Ready to Start?</p>
+      <h2 class="cta-strip__title">Let's make something worth watching.</h2>
+      <p class="cta-strip__sub">Tell us about your project and we'll get back to you within one business day.</p>
+      <a href="/contact/" class="hero__cta">Start a Project</a>
+    </div>
+  </div>
+</section>
+{{ end }}

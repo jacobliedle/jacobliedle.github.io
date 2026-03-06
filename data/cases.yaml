@@ -1,0 +1,64 @@
+# Work cases — each entry powers a card on the Work page.
+# Fields:
+#   title       — project name
+#   client      — client or "Independent"
+#   type        — Commercial / Documentary / Music Video / Narrative / Corporate / Event
+#   description — 1-2 sentence project summary
+#   thumbnail   — path to still image, e.g. /images/work/haymaker-promo.jpg
+#   video       — local or hosted video file URL for embedded player
+#   link        — external streaming URL (YouTube, Vimeo, etc.)
+#   link_label  — button label, e.g. "Watch on Vimeo" (defaults to "Watch" if omitted)
+
+- title: "Haymaker Promo"
+  client: "Haymaker"
+  type: "Commercial"
+  description: "A high-energy brand film built to match the intensity of the product. Fast cuts, kinetic camera work, and a driving score — edited to hit every beat."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""
+
+- title: "Mountain Brand Spot"
+  client: "Placeholder Client"
+  type: "Commercial"
+  description: "Cinematic product showcase set against Colorado's iconic mountain backdrop. Shot over two days on location with a lean crew."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""
+
+- title: "Documentary Short"
+  client: "Independent"
+  type: "Documentary"
+  description: "A short-form documentary exploring craft and community. Intimate interviews paired with immersive vérité footage shot over several weeks."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""
+
+- title: "Artist Music Video"
+  client: "Local Artist"
+  type: "Music Video"
+  description: "A concept-driven visual narrative built to mirror the emotional arc of the track. Shot in a single night with available light and a tight crew."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""
+
+- title: "Corporate Overview"
+  client: "Placeholder Client"
+  type: "Corporate"
+  description: "A polished company overview film designed for web, social, and sales presentations. Clean, confident, and built to last."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""
+
+- title: "Event Highlight Film"
+  client: "Placeholder Client"
+  type: "Event"
+  description: "Full-day event coverage edited down to a tight highlight film. Built for social and internal communications use."
+  thumbnail: ""
+  video: ""
+  link: ""
+  link_label: ""

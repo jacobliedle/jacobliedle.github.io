@@ -25,24 +25,40 @@
     </div>
   </div>
 
-    <!-- Services Detail -->
-    {{ with .Params.services }}
-    <div style="margin-top: 6rem;">
-      <div class="section__header">
-        <p class="section__label">Expertise</p>
-        <h2 class="section__title">Services</h2>
-        <div class="section__divider"></div>
-      </div>
-      <div class="services__grid">
-        {{ range . }}
-        <div class="service-card">
-          <h3 class="service-card__title">{{ .title }}</h3>
-          <p class="service-card__text">{{ .description }}</p>
-        </div>
-        {{ end }}
-      </div>
+  <!-- Services Detail -->
+  {{ with .Params.services }}
+  <div class="container" style="margin-top: 6rem;">
+    <div class="section__header">
+      <p class="section__label">Expertise</p>
+      <h2 class="section__title">Services</h2>
+      <div class="section__divider"></div>
     </div>
-    {{ end }}
+    <div class="services__grid">
+      {{ range . }}
+      <div class="service-card">
+        <h3 class="service-card__title">{{ .title }}</h3>
+        <p class="service-card__text">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- BTS Photo Grid -->
+  <div class="bts-grid">
+    <div class="bts-grid__header">
+      <p class="section__label">Behind the Scenes</p>
+      <h2 class="section__title">On Set</h2>
+      <div class="section__divider"></div>
+    </div>
+    <div class="bts-grid__photos">
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+      <div class="bts-grid__photo bts-grid__photo--placeholder"><span>Photo Coming Soon</span></div>
+    </div>
   </div>
 </section>
 {{ end }}

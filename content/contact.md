@@ -2,7 +2,7 @@
 title: "Tell Us Your Story"
 layout: "contact"
 type: "page"
-sectionLabel: "Connect"
+sectionLabel: "Contact"
 emails:
   - label: "Direct"
     address: "jacob@argomediagroup.com"
